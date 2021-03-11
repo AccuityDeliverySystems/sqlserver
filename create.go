@@ -256,6 +256,7 @@ func outputInserted(db *gorm.DB) {
 			db.Statement.WriteString(" INSERTED.")
 			db.Statement.AddVar(db.Statement, clause.Column{Name: field.DBName})
 			db.Statement.WriteString( "INTO @output(id); ")
+			db.Statement.WriteString(" TEEEEST " )
 		}
 	}
 }
